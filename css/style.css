@@ -6,6 +6,7 @@
 
 :root {
   --primary-color:#fcf5e9;
+  --dark-color:#333;
   --contain-normal:1100px;
   --contain-wide:1400px;
   --contain-nerrow:900px;
@@ -32,6 +33,41 @@ img {
 /* Utility Classes*/
 .bg-primary {
   background: var(--primary-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-dark .bg-primary {
+  padding: 0 0.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.visually-hidden {
+  clip: react(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .section-heading {
@@ -139,8 +175,6 @@ img {
 
 /* Service */
 .services {
-  background: #333;
-  color: #fff;
   padding: 3rem 0 4rem;
 }
 .services .services-flex {
@@ -162,6 +196,35 @@ img {
 }
 .team .team-flex .team-item img {
   border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 0 4rem;
+}
+.contact p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact form .form-group {
+  margin: 2rem;
+}
+.contact form .form-group input, .contact form .form-group textarea {
+  border: none;
+  border-bottom: 1px #333 solid;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  padding-bottom: 1rem;
+}
+.contact form .form-group input:focus, .contact form .form-group textarea:focus {
+  outline: 0;
+}
+.contact form .form-group textarea {
+  height: 200px;
+}
+.contact form .form-group button {
+  width: 100%;
 }
 
 /* Media Queries */
